@@ -1,0 +1,13 @@
+<h1>Item List</h1>
+
+<button mat-raised-button color="primary"(click)="toggleList()">
+  {{ showList ? 'Ocultar lista' : 'Mostrar lista' }}
+</button>
+
+<div *ngIf="showList">
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let item of items">
+      {{ item.name }} - {{ item.cost }}
+    </mat-list-item>
+  </mat-list>
+</div>
